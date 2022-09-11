@@ -37,7 +37,7 @@ app.get('/auth_0', async (req, res) => {
     include_granted_scopes: true
   });
 
-  res.writeHead(301, { "Location": authorizationUrl });
+  res.redirect(authorizationUrl);
 });
 
 app.get('/auth_1', async (req, res) => {
